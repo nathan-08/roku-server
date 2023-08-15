@@ -8,4 +8,8 @@ ln -s /home/pi/node/node-v18.17.1-linux-armv7l/bin/node /usr/bin/node
 
 # Todo
 [ ] create daemon
+[ ] remote ssh access
+[ ] mock json data
+[ ] create roku-controller, cron process
+[ ] figure out js dates
 

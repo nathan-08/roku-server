@@ -4,6 +4,9 @@ const express = require('express');
 const PORT = process.env.PORT;
 const auth = require('./auth');
 
+const data = JSON.parse(fs.readFileSync('../mockdata.json'));
+console.log(`checkin time: ${data.checkin_time}`);
+
 const app = express();
 // require password to access server
 app.use(auth);

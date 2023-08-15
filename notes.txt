@@ -1,0 +1,11 @@
+# to determine cpu version info (for installing nodejs)
+cat /proc/cpuinfo
+
+# to create symlinks
+ln -s /home/pi/node/node-v18.17.1-linux-armv7l/bin/node /usr/bin/node
+
+# Local .env file requires: PORT, AUTH_TOKEN
+
+# Todo
+[ ] create daemon
+

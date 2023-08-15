@@ -22,6 +22,7 @@ sudo systemctl start <name of service>
 sudo systemctl status <name of service>
 
 # Todo
+[ ] process POST request from webhook
 [x] create daemon
 [x] remote ssh access
 [x] mock json data

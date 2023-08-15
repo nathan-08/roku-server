@@ -6,10 +6,25 @@ ln -s /home/pi/node/node-v18.17.1-linux-armv7l/bin/node /usr/bin/node
 
 # Local .env file requires: PORT, AUTH_TOKEN
 
+# ssh connection
+forward port 22
+# generate ssh key on local machine
+ssh-keygen -f ~/.ssh/remote
+# copy public key to remote machine
+ssh-copy-id -i ~/.ssh/<key name>.pub <user>@<ip address>
+# then connect with:
+ssh -i ~/.ssh/<key name> <user>@<ip address>
+
+# create daemon
+create service file in /etc/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl start <name of service>
+sudo systemctl status <name of service>
+
 # Todo
-[ ] create daemon
-[ ] remote ssh access
-[ ] mock json data
-[ ] create roku-controller, cron process
-[ ] figure out js dates
+[x] create daemon
+[x] remote ssh access
+[x] mock json data
+[x] create roku-controller, cron process
+[x] figure out js dates
 

@@ -1,0 +1,11 @@
+[Unit]
+Description=Sends commands to Roku device periodically
+
+[Service]
+WorkingDirectory=/home/pi/code/roku-controller
+ExecStart=/bin/bash /home/pi/code/roku-controller/start.sh
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
